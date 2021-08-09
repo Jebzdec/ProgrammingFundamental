@@ -1,5 +1,7 @@
-#include <iostream>
+#include <iosteam>
 using namespace std;
 int main(){
-    cout<<"haha456";
+    int a;
+    cin>>a;
+    cout<<a;
 }
