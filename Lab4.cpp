@@ -2,7 +2,7 @@
 #include<string>
 using namespace std;
 int main(){
-    string str;
+    string st;
     cin>>str;
     int l=-1;
     for(int i=0;i<str.size();i++){
