@@ -1,23 +1,33 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 int main(){
-    string input,p[3],name[3]={"Kob","Romtham","Jojo"};
+    string input;
+    vector<char> p[3];
     getline(cin,input);
-    for(int i=0;i<3;i++){
-        if(i<2) p[i]=input.substr(0,input.find(','));
-        else p[i]=input;
-        input=input.substr(input.find(',')+1);
-        int a=0,A=0,N=0,S=0,F=0;
-        for(int j=0;j<p[i].size();j++){
-            if(p[i][j]>='0' and p[i][j]<='9') continue;
-            else if(p[i][j]>='a' and p[i][j]<='a') continue;
-            else if(p[i][j]>='A' and p[i][j]<='A') continue
-            else if(p[i][j]>='$' or p[i][j]<='#' or p[i][j]>='@') S=1;
-            else if(isalnum(u)) N=1;
-            else F=1;
-        }
-        if(F==0 and a+A+N+S==4 and p[i].size()>=6 and p[i].size()<=12)
-            cout<<p[i]<<" ("<<name[i]<<")";
+    int k=0;
+    for(int i=0;i<input.size();i++){
+        if(input[i]==','){
+            k++;
+            continue;
+        }p[k].push_back(input[i]);
     }
+     for(int i=0;i<3;i++){
+         if(p[i].size()<6 or p[i].size()>12) continue;
+         int a=0,A=0,num=0,S=0;
+         for(int j=0;j<p[i].size();j++){
+             if(p[i][j]>='0' and p[i][j]<='9') num++;
+             else if(p[i][j]>='a' and p[i][j]<='z') a++;
+             else if(p[i][j]>='A' and p[i][j]<='Z') A++;
+             else if(p[i][j]=='$' or p[i][j]=='#' or p[i][j]=='@') S++;
+             else break;
+             if(j==p[i].size()-1 and num>0 and a>0 and A>0 and S>0){
+                 for(auto a:p[i]) cout<<a;
+                 if(i==0) printf(" (Kob)");
+                 else if(i==1) printf(" (Romtham)");
+                 else if(i==2) printf(" (Jojo)");
+             }
+         }
+     }
 }

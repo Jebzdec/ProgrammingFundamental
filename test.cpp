@@ -9,15 +9,17 @@ using namespace std;
 int main(){
     int a[100];
     for(int i=0;i<100;i++) a[i]=i;
-    queue<vector<int>> q;
+    //queue<vector<int>> q;
     vector<int> v,u;
-    for(int i=0;i<100;i++)
-    v.push_back(i);
-    q.push(v.push_back(1));
-    while(!q.empty()){
-        u=q.front();
-        for(auto i:u) cout<<i<<endl;
-        q.pop();
-    }
+//    for(int i=0;i<100;i++)
+//    v.push_back(i);
+//    q.push(v.push_back(1));
+//    while(!q.empty()){
+//        u=q.front();
+//        for(auto i:u) cout<<i<<endl;
+//        q.pop();
+//    }
+v.push_back(' ');
+if(v[0]==' ') cout<<"55";
 }
 
