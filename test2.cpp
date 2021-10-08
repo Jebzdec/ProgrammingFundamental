@@ -8,5 +8,8 @@ int i;
 //srand( time( NULL ) );
 //for(int i=0;i<10;i++)
 //printf("%d\n",rand()%1+2);
-cout<<time(NULL);
+// cout<<time(NULL);
+int a=1023;
+cout << a && 0;
+
 }
