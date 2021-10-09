@@ -9,7 +9,7 @@ int i;
 //for(int i=0;i<10;i++)
 //printf("%d\n",rand()%1+2);
 // cout<<time(NULL);
-int a=1023;
-cout << a && 0;
-
+bool a=1;
+cout<<a;
+if(a) cout<<"true";
 }
